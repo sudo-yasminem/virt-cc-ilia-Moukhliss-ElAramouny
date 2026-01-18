@@ -2,7 +2,10 @@
 
 const Fastify = require('fastify')
 const app = require("./app")
-const server = Fastify({ logger: true })
+const server = Fastify({ logger: {
+                                    level: "warn"
+                                   }
+})
 
 server.register(app)
 
