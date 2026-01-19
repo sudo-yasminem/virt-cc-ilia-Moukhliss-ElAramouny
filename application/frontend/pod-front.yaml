@@ -4,7 +4,7 @@ metadata:
   name: calculatrice-frontend
 spec:
   containers:
-  - image: mon-frontend
+  - image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-moukhlisselaramouny
     name: frontend
     resources:
       requests:
@@ -14,4 +14,3 @@ spec:
     - containerPort: 80
       name: http
       protocol: TCP
-
