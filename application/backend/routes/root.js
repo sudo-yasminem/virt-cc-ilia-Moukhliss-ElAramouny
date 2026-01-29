@@ -23,7 +23,7 @@ module.exports = async function (fastify, opts) {
     }
   })
 
-  fastify.post("v2/multiplication", async function (request, reply){
+  fastify.post("/v2/multiplication", async function (request, reply){
     const{a,b} = request.body
 
     return {
@@ -31,7 +31,7 @@ module.exports = async function (fastify, opts) {
     }
   })
 
-  fastify.post("v2/division", async function (request, reply){
+  fastify.post("/v2/division", async function (request, reply){
     const {a,b} = request.body
 
     return {
@@ -39,7 +39,7 @@ module.exports = async function (fastify, opts) {
     }
   })
 
-  fastify.post("v2/racine", async function (request, reply){
+  fastify.post("/v2/racine", async function (request, reply){
     const {a} = request.body
 
     return {
@@ -47,7 +47,7 @@ module.exports = async function (fastify, opts) {
     }
   })
 
-  fastify.post("v2/pourcentage", async function (request, reply){
+  fastify.post("/v2/pourcentage", async function (request, reply){
     const {a} = request.body
 
     return{
