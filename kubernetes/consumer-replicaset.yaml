@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: consumer-replicaset
+  namespace: moukhliss-elaramouny
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumer
+  template:
+    metadata:
+      labels:
+        app: consumer
+    spec:
+      containers:
+        - name: consumer
+          image: calculatrice-consumer:1.0
+          env:
+            - name: REDIS_HOST
+              value: svc-redis
+            - name: RABBITMQ_URL
+              value: amqp://svc-rabbitmq:5672
+          resources:
+            requests:
+              cpu: "4m"
+              memory: "32Mi"

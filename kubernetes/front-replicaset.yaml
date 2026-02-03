@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: front-replicaset
+  namespace: moukhliss-elaramouny
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+        - name: front
+          image: calculatrice-frontend:1.0
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "4m"
+              memory: "32Mi"
