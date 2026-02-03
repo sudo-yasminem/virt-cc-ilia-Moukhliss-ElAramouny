@@ -1,4 +1,5 @@
 'use strict'
+import redis from "./redis/client.js";
 
 const Fastify = require('fastify')
 const app = require("./app")
