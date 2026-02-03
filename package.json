@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny#readme",
   "dependencies": {
+    "fastify": "^5.6.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.18",
+    "tailwindcss": "^4.1.18"
     "@fastify/auth": "^5.0.4",
     "@fastify/autoload": "^6.3.1",
     "@fastify/jwt": "^10.0.0",

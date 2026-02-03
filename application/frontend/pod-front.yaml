@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: calculatrice-frontend
+spec:
+  containers:
+  - image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-moukhlisselaramouny
+    name: frontend
+    resources:
+      requests:
+        cpu: "4m"
+        memory: "32Mi"
+    ports:
+    - containerPort: 80
+      name: http
+      protocol: TCP
