@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: front
-          image: calculatrice-frontend:1.0
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-moukhlisselaramouny:v2.0
           ports:
             - containerPort: 80
           resources:

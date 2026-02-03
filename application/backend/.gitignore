@@ -60,3 +60,4 @@ profile*
 /node_modules
 /student.json
 .gitignore
+/student 1.json

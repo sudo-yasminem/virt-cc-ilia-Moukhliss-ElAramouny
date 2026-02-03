@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: consumer
-          image: calculatrice-consumer:1.0
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/consumer-moukhlisselaramouny:v2.0
           env:
             - name: REDIS_HOST
               value: svc-redis
