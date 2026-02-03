@@ -1,6 +1,7 @@
 'use strict'
 
 const redis = require('../redis');
+const { sendToQueue} = require('../rabbitmq')
 
 module.exports = async function (fastify, opts) {
 
@@ -11,6 +12,7 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/addition", async function (request, reply){
     const {a,b} = request.body
+    sendToQueue({operation: 'addition', a, b})
     const resultat = a + b
 
     await redis.set('dernier_resultat', resultat)
@@ -22,6 +24,7 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/soustraction", async function (request, reply){
     const {a,b} = request.body
+    sendToQueue({operation: 'soustraction', a, b})
     const resultat = a - b;
 
     await redis.set('dernier_resultat', resultat)
@@ -33,6 +36,7 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/multiplication", async function (request, reply){
     const{a,b} = request.body
+    sendToQueue({operation: 'multiplication', a, b})
     const resultat = a*b
 
     await redis.set('dernier_resultat', resultat)
@@ -44,6 +48,7 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/division", async function (request, reply){
     const {a,b} = request.body
+    sendToQueue({operation: 'division', a, b})
     const resultat = a/b;
 
     return {
