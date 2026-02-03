@@ -43,7 +43,7 @@ module.exports = async function (fastify, opts) {
     const {a} = request.body
 
     return {
-      resultat: sqrt(a)
+      resultat: Math.sqrt(a)
     }
   })
 

@@ -20,13 +20,14 @@ _à venir_
 _à venir_
 
 ### Application : frontend, backend, consumer
-_à venir_
+Pour le frontend, nous avons utilisé HTML et CSS pour créer un visuel simple de calculatrice. Plus d'informations sur le [README du front](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/application/frontend/README.md).
+
+Pour le backend, nous avons utilisé JavaScript avec Node.js. Plus d'informations sur le [README du back](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/application/backend/README.md).
+
+Pour le consumer, _à venir_
 
 ### Construction et publication des images de conteneurs dans Google Artifact Registy
 _à venir_
 
 ## Difficultés
-_à venir_
-
-## Ressources
 _à venir_
