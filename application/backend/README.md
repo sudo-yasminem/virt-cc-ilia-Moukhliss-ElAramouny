@@ -1,23 +1,18 @@
-# Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
-This project was bootstrapped with Fastify-CLI.
+# API - Backend
 
-## Available Scripts
+Cette API implmentée avec FastifyJS permet les opérations mathématiques suivantes:
 
-In the project directory, you can run:
+- Adiitions
+- Soustractions
+- Multiplications
+- Divisions
+- Calcul de racine carrée
+- Calcul de pourcentage
 
-### `npm run dev`
+Test: npm run dev dans le dossier backend. 
 
-To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+La liaison entre le frontend et le backend est fonctionnelle.
 
-### `npm start`
+Elle fonctionne avec Redis et RabbitMQ.
 
-For production mode
-
-### `npm run test`
-
-Run the test cases.
-
-## Learn More
-
-To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
+ 
