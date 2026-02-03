@@ -2,7 +2,7 @@
 
 Cette API implmentée avec FastifyJS permet les opérations mathématiques suivantes:
 
-- Adiitions
+- Additions
 - Soustractions
 - Multiplications
 - Divisions
