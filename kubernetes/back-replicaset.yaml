@@ -13,9 +13,11 @@ spec:
       labels:
         app: api
     spec:
+      imagePullSecrets:
+        - name: google-cloud-key
       containers:
         - name: api
-          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/backend-moukhlisselaramouny:v2.0
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/backend-moukhlisselaramouny:v2.3
           ports:
             - containerPort: 3000
           env:

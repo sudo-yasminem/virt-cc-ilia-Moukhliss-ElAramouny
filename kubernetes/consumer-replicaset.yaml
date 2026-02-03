@@ -13,9 +13,12 @@ spec:
       labels:
         app: consumer
     spec:
+      imagePullSecrets:
+        - name: google-cloud-key
       containers:
         - name: consumer
           image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/consumer-moukhlisselaramouny:v2.0
+          imagePullPolicy: Always
           env:
             - name: REDIS_HOST
               value: svc-redis
