@@ -1,20 +1,21 @@
-import Redis from "ioredis";
-import "dotenv/config";
+'use strict';
 
+const Redis = require('ioredis');
+
+// Connexion Redis (Docker ou local)
 const redis = new Redis({
-    host: process.env.REDIS_HOST,
-    port: process.env.REDIS_PORT,
+  host: process.env.REDIS_HOST || '127.0.0.1',
+  port: process.env.REDIS_PORT || 6379,
 });
 
-redis.on("connect", () => {
-    console.log("Redis connecté");
+redis.on('connect', () => {
+  console.log('Redis connecté');
 });
 
-redis.on("erreur", (err) => {
-    console.error("Erreur Redis", err);
+redis.on('error', (err) => {
+  console.error('Redis erreur:', err);
 });
 
-export default redis
-
+module.exports = redis;
 
 
