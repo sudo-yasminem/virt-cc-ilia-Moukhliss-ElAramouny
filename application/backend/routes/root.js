@@ -1,5 +1,7 @@
 'use strict'
 
+const redis = require('../redis');
+
 module.exports = async function (fastify, opts) {
 
   fastify.get('/v2/test', async function (request, reply) {
@@ -9,6 +11,9 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/addition", async function (request, reply){
     const {a,b} = request.body
+    const resultat = a + b
+
+    await redis.set('dernier_resultat', resultat)
 
     return {
       resultat: a + b
@@ -17,6 +22,9 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/soustraction", async function (request, reply){
     const {a,b} = request.body
+    const resultat = a - b;
+
+    await redis.set('dernier_resultat', resultat)
 
     return {
       resultat: a - b
@@ -25,6 +33,9 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/multiplication", async function (request, reply){
     const{a,b} = request.body
+    const resultat = a*b
+
+    await redis.set('dernier_resultat', resultat)
 
     return {
       resultat: a*b
@@ -33,6 +44,7 @@ module.exports = async function (fastify, opts) {
 
   fastify.post("/v2/division", async function (request, reply){
     const {a,b} = request.body
+    const resultat = a/b;
 
     return {
       resultat: a/b
