@@ -1,0 +1,9 @@
+/node_modules
+/student.json
+
+.idea
+
+/foundation/.terraform.lock.hcl
+/foundation/.terraform
+
+.gitignore
