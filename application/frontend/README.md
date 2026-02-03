@@ -1,5 +1,5 @@
 # Partie frontend : 
-Cette interface utilisateur simple est intuitivepermet d'intéragir avec l'API pour envoyer des calculs et visualiser les résultats stockés.
+Cette interface utilisateur simple est intuitive permet d'intéragir avec l'API pour envoyer des calculs et visualiser les résultats stockés.
 
 ## Techno utilisées : 
 - HTML
