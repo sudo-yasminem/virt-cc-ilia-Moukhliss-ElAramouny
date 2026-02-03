@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: consumer-replicaset
+  namespace: moukhliss-elaramouny
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: consumer
+  template:
+    metadata:
+      labels:
+        app: consumer
+    spec:
+      imagePullSecrets:
+        - name: google-cloud-key
+      containers:
+        - name: consumer
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/consumer-moukhlisselaramouny:v2.0
+          imagePullPolicy: Always
+          env:
+            - name: REDIS_HOST
+              value: svc-redis
+            - name: RABBITMQ_URL
+              value: amqp://svc-rabbitmq:5672
+          resources:
+            requests:
+              cpu: "4m"
+              memory: "32Mi"

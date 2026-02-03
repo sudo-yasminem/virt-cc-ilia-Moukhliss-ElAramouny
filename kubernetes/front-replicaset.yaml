@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: front-replicaset
+  namespace: moukhliss-elaramouny
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      imagePullSecrets:
+        - name: google-cloud-key
+      containers:
+        - name: front
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/frontend-moukhlisselaramouny:v2.0
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "4m"
+              memory: "32Mi"

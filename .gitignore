@@ -1,5 +1,7 @@
-.idea/
-**/.terraform
-*.tfstate
-**/__pycache__
-/node_modules
+/.idea/
+/foundation/.terraform.lock.hcl
+/foundation/.terraform/
+/node_modules/
+/student.json
+
+.gitignore

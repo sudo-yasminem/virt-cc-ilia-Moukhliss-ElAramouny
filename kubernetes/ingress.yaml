@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: calculatrice-ingress
+  namespace: moukhliss-elaramouny
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: calculatrice-moukhliss-elaramouny.polytech-dijon.kiowy.net
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: back-replicaset
+                port:
+                  number: 3000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: front-replicaset
+                port:
+                  number: 80

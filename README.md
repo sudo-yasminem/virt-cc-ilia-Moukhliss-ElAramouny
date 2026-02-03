@@ -14,19 +14,15 @@ L’objectif est de définir l’infrastructure en IaC avec **Terraform**, de co
 Pour plus de détail, voici le [sujet détaillé fourni](https://github.com/JeromeMSD/module_virtualisation-et-cloud-computing/blob/main/projet.md#sujet-du-projet).
 
 ### Infrastructure avec Terraform
-_à venir_
+Nous avons utilisé Terraform pour automatiser la création d'une infrastructure sur Scaleway, incluant un cluster Kubernetes, des registres de conteneurs et la gestion DNS.
+Plus d'informations sur le [README de foundation](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/foundation/README.md).
 
 ### Conteneur Kubernetes
-_à venir_
+Kubernetes nous permet d'orchestrer le déploiement applicatif et son architecture en microservices. L'ensemble est sécurisé dans un namespace dédié et exposé via Ingress.
+Plus d'informations sur le [README de Kubernetes](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/kubernetes/README.md).
 
 ### Application : frontend, backend, consumer
-_à venir_
+Pour le frontend, nous avons utilisé HTML et CSS pour créer un visuel simple de calculatrice. Plus d'informations sur le [README du front](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/application/frontend/README.md).
 
-### Construction et publication des images de conteneurs dans Google Artifact Registy
-_à venir_
+Pour le backend, nous avons utilisé JavaScript avec Node.js. Plus d'informations sur le [README du back](https://github.com/sudo-yasminem/virt-cc-ilia-Moukhliss-ElAramouny/blob/v2.0/application/backend/README.md).
 
-## Difficultés
-_à venir_
-
-## Ressources
-_à venir_

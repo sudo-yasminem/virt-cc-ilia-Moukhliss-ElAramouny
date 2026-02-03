@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: back-replicaset
+  namespace: moukhliss-elaramouny
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api
+  template:
+    metadata:
+      labels:
+        app: api
+    spec:
+      imagePullSecrets:
+        - name: google-cloud-key
+      containers:
+        - name: api
+          image: europe-west1-docker.pkg.dev/polytech-dijon/polytech-dijon/backend-moukhlisselaramouny:v2.3
+          ports:
+            - containerPort: 3000
+          env:
+            - name: REDIS_HOST
+              value: svc-redis
+            - name: RABBITMQ_URL
+              value: amqp://svc-rabbitmq:5672
+            - name: PORT
+              value: "3000"
+          resources:
+            requests:
+              cpu: "4m"
+              memory: "32Mi"
